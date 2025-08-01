@@ -43,7 +43,7 @@ def save_ascii_arrt(ascii_art, output_path):
 def main():
     print("welcome to the ASCII Art generator")
     image_path = input("Enter the path to your image: ")
-    output_path = input("Enter the path to save the ASCII art: ")
+    output_path = input("Enter the path to save the ASCII art (e.g., output.txt): ")
     new_width = int(input("Enter the desired width of the ASCII art: "))
 
     try:
