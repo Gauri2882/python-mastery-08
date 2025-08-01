@@ -40,7 +40,18 @@ def save_ascii_arrt(ascii_art, output_path):
     with open(output_path, "w") as file:
         file.write(ascii_art)
 
+def main():
+    print("welcome to the ASCII Art generator")
+    image_path = input("Enter the path to your image: ")
+    output_path = input("Enter the path to save the ASCII art: ")
+    new_width = int(input("Enter the desired width of the ASCII art: "))
 
-output_path = r"part-08/i_pinimg_com_originals_39_19_33_3919330c71a2a725885a81503dc4cb0e_jpg.png"
-ascii_art = generate_ascii_art(output_path, 100)
-save_ascii_arrt(ascii_art, r"part-08/final.txt")
+    try:
+        ascii_art = generate_ascii_art(image_path, new_width)
+        save_ascii_arrt(ascii_art, output_path)
+        print(f"ASCII art generated and saved to {output_path}")
+    except Exception as e:
+        print(f"An error occured: {e}")
+
+if __name__ == "__main__":
+    main()
