@@ -44,7 +44,7 @@ def main():
     print("welcome to the ASCII Art generator")
     image_path = input("Enter the path to your image: ")
     output_path = input("Enter the path to save the ASCII art (e.g., output.txt): ")
-    new_width = int(input("Enter the desired width of the ASCII art: "))
+    new_width = int(input("Enter the desired width of the ASCII art (default is 100): "))
 
     try:
         ascii_art = generate_ascii_art(image_path, new_width)
